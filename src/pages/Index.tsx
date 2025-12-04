@@ -75,9 +75,17 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 pt-32">
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 pt-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-neon-purple/20 via-background to-background"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,240,255,0.1),transparent_50%)]"></div>
+        
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full opacity-20 pointer-events-none hidden lg:block">
+          <img 
+            src="https://cdn.poehali.dev/projects/f7504bbc-4e2f-4bfb-bdc3-bc63223265f5/files/f208607d-7980-4b7e-b7db-9cf932b11f0f.jpg" 
+            alt="AI Robot"
+            className="w-full h-full object-contain animate-pulse-glow"
+          />
+        </div>
         
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <div className="inline-block mb-6 px-6 py-2 border border-primary rounded-full glow-cyan">
