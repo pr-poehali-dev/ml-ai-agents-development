@@ -19,7 +19,63 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-primary/20">
+        <div className="max-w-7xl mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Icon name="Brain" size={28} className="text-primary" />
+              <span className="text-xl font-bold">AI Solutions</span>
+            </div>
+
+            <nav className="hidden md:flex items-center gap-6">
+              <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Услуги
+              </a>
+              <a href="#process" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Процесс
+              </a>
+              <a href="#portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Портфолио
+              </a>
+              <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Контакты
+              </a>
+            </nav>
+
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://wa.me/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 hover:border-[#25D366] hover:glow-cyan transition-all text-[#25D366]"
+                title="WhatsApp"
+              >
+                <Icon name="MessageCircle" size={18} />
+              </a>
+              
+              <a 
+                href="https://t.me/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#0088cc]/10 border border-[#0088cc]/30 hover:border-[#0088cc] hover:glow-cyan transition-all text-[#0088cc]"
+                title="Telegram"
+              >
+                <Icon name="Send" size={18} />
+              </a>
+              
+              <a 
+                href="mailto:contact@example.com"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-primary/10 border border-primary/30 hover:border-primary hover:glow-cyan transition-all text-primary"
+                title="Email"
+              >
+                <Icon name="Mail" size={18} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 pt-32">
         <div className="absolute inset-0 bg-gradient-to-b from-neon-purple/20 via-background to-background"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,240,255,0.1),transparent_50%)]"></div>
         
@@ -61,7 +117,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 relative">
+      <section id="services" className="py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background"></div>
         
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -159,7 +215,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-card/30">
+      <section id="process" className="py-20 px-4 bg-card/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-glow-cyan">
@@ -276,7 +332,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-card/30">
+      <section id="portfolio" className="py-20 px-4 bg-card/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-glow-cyan">
@@ -383,7 +439,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-b from-background via-card/30 to-background">
+      <section id="contact" className="py-20 px-4 bg-gradient-to-b from-background via-card/30 to-background">
         <div className="max-w-2xl mx-auto">
           <Card className="bg-card border-2 border-primary p-8 md:p-12 glow-cyan">
             <div className="text-center mb-8">
