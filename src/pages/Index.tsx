@@ -461,15 +461,46 @@ const Index = () => {
           <p className="text-muted-foreground text-sm mb-6">
             Превращаем идеи в интеллектуальные решения
           </p>
-          <div className="flex gap-6 justify-center">
+          
+          <div className="mb-6">
+            <p className="text-sm text-muted-foreground mb-3">Свяжитесь с нами в мессенджерах:</p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <a 
+                href="https://wa.me/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-[#25D366]/10 border border-[#25D366]/30 rounded-lg hover:border-[#25D366] hover:glow-cyan transition-all text-[#25D366]"
+              >
+                <Icon name="MessageCircle" size={20} />
+                <span className="text-sm font-medium">WhatsApp</span>
+              </a>
+              
+              <a 
+                href="https://t.me/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-[#0088cc]/10 border border-[#0088cc]/30 rounded-lg hover:border-[#0088cc] hover:glow-cyan transition-all text-[#0088cc]"
+              >
+                <Icon name="Send" size={20} />
+                <span className="text-sm font-medium">Telegram</span>
+              </a>
+              
+              <a 
+                href="mailto:contact@example.com" 
+                className="flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg hover:border-primary hover:glow-cyan transition-all text-primary"
+              >
+                <Icon name="Mail" size={20} />
+                <span className="text-sm font-medium">Email</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="flex gap-6 justify-center pt-6 border-t border-primary/10">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
               <Icon name="Github" size={20} />
             </a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
               <Icon name="Linkedin" size={20} />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              <Icon name="Mail" size={20} />
             </a>
           </div>
         </div>
