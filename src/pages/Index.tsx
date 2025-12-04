@@ -276,6 +276,113 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-card/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-glow-cyan">
+              Наши кейсы
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Реальные проекты, которые изменили бизнесы клиентов
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "ShoppingCart",
+                title: "Рекомендательная система для e-commerce",
+                description: "ML-модель персонализации товаров увеличила конверсию на 34% для онлайн-магазина",
+                tags: ["Python", "TensorFlow", "Redis"],
+                metric: "+34% конверсия",
+                color: "primary"
+              },
+              {
+                icon: "MessageSquare",
+                title: "AI-ассистент для техподдержки",
+                description: "Чат-бот обрабатывает 70% обращений автоматически, экономя 120 часов в неделю",
+                tags: ["GPT-4", "FastAPI", "PostgreSQL"],
+                metric: "70% автоматизация",
+                color: "secondary"
+              },
+              {
+                icon: "TrendingUp",
+                title: "Прогнозирование спроса",
+                description: "Система предсказания остатков снизила потери от затоваривания на 28%",
+                tags: ["XGBoost", "Apache Airflow", "Docker"],
+                metric: "-28% потери",
+                color: "primary"
+              },
+              {
+                icon: "Eye",
+                title: "Компьютерное зрение для ритейла",
+                description: "Распознавание товаров на полках автоматизировало аудит 500+ магазинов",
+                tags: ["YOLO", "OpenCV", "Kubernetes"],
+                metric: "500+ магазинов",
+                color: "secondary"
+              },
+              {
+                icon: "FileText",
+                title: "NLP для анализа документов",
+                description: "Автоматическая обработка контрактов сокращает время проверки с 2 часов до 5 минут",
+                tags: ["BERT", "Spacy", "Celery"],
+                metric: "96% экономия времени",
+                color: "primary"
+              },
+              {
+                icon: "BarChart3",
+                title: "Система антифрода",
+                description: "Детекция аномалий заблокировала $2.3M подозрительных транзакций за квартал",
+                tags: ["Scikit-learn", "Kafka", "Grafana"],
+                metric: "$2.3M сохранено",
+                color: "secondary"
+              }
+            ].map((project, index) => (
+              <Card 
+                key={index} 
+                className="bg-card border border-primary/20 hover:border-primary transition-all duration-300 p-6 hover:glow-cyan group"
+              >
+                <div className={`mb-4 w-12 h-12 rounded-lg flex items-center justify-center ${
+                  project.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                } group-hover:glow-cyan transition-all`}>
+                  <Icon 
+                    name={project.icon as any} 
+                    size={24} 
+                    className={project.color === 'primary' ? 'text-primary' : 'text-secondary'} 
+                  />
+                </div>
+                
+                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+                
+                <div className="mb-4">
+                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
+                    project.color === 'primary' 
+                      ? 'bg-primary/20 text-primary' 
+                      : 'bg-secondary/20 text-secondary'
+                  }`}>
+                    {project.metric}
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span 
+                      key={tagIndex}
+                      className="text-xs px-2 py-1 bg-muted rounded text-muted-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4 bg-gradient-to-b from-background via-card/30 to-background">
         <div className="max-w-2xl mx-auto">
           <Card className="bg-card border-2 border-primary p-8 md:p-12 glow-cyan">
